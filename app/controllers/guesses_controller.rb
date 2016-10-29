@@ -5,11 +5,13 @@ class GuessesController < ApplicationController
     @second = params["second_number"]
     @third = params["third_number"]
 
-    if @first < @second && @second < @third
+    if @first.to_f < @second.to_f && @second.to_f < @third.to_f
       @obeys = "Yes!"
     else
       @obeys = "No!"
     end
+
+    @list = Guess.all
 
     render ("guesses/index.html.erb")
   end
