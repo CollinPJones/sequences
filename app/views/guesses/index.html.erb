@@ -18,7 +18,15 @@
 
 <ul>
   <li>
-    <%= @first %>, <%= @second %>, <%= @third %> <%= @obeys %>
+
+    <%= params["first_number"]%>, <%= params["second_number"] %>, <%= params["third_number"] %>
+
+    <% if params["first_number"] <  params["second_number"] && params["second_number"] < params["third_number"] %>
+    Yes!
+    <% else %>
+    No!
+    <% end %>
+
   </li>
 
 </ul>

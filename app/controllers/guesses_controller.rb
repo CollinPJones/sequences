@@ -1,15 +1,6 @@
 class GuessesController < ApplicationController
   def index
-
-    @first = params["first_number"]
-    @second = params["second_number"]
-    @third = params["third_number"]
-
-    if @first.to_f < @second.to_f && @second.to_f < @third.to_f
-      @obeys = "Yes!"
-    else
-      @obeys = "No!"
-    end
+    #params = {"first_number"=>"1", "second_number"=>"2", "third_number"=>"3"}
 
     @list = Guess.all
 
